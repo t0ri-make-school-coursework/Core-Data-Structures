@@ -105,7 +105,7 @@ def encode(number, base):
 
     # If base 10, do nothing
     if base == 10:
-        return number
+        return str(number)
 
     number = int(number)
     numbers = list(string.digits + string.ascii_lowercase)

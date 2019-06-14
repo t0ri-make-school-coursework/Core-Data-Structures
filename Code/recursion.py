@@ -13,8 +13,12 @@ def factorial(n):
 
 
 def factorial_iterative(n):
-    # TODO: implement the factorial function iteratively here
-    pass
+    # implement the factorial function iteratively here
+    factorial = 1                       # O(1)
+    for num in range(2, n+1):           # ~n iterations
+        factorial = factorial * num     # O(1)
+    
+    return factorial                    # O(1)
     # once implemented, change factorial (above) to call factorial_iterative
     # to verify that your iterative implementation passes all tests
 
@@ -27,6 +31,7 @@ def factorial_recursive(n):
     elif n > 1:
         # call function recursively
         return n * factorial_recursive(n - 1)
+    
 
 
 def main():

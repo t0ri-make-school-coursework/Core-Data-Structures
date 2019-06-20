@@ -1,7 +1,11 @@
 #!python
 
 def contains(text, pattern):
-    """Return a boolean indicating whether pattern occurs in text."""
+    """Return a boolean indicating whether pattern occurs in text.
+    Runtime, worst case: O(n^2), n is the len(text)
+    Runtime, best case: O(1), if text == ''
+    Space Complexity: O(n), n is the len(text)
+    """
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
     assert isinstance(pattern, str), 'pattern is not a string: {}'.format(text)
     
@@ -30,7 +34,11 @@ def contains(text, pattern):
 
 def find_index_iterative(text, pattern):
     """Return the starting index of the first occurrence of pattern in text,
-    or None if not found."""
+    or None if not found.
+    Runtime, worst case: O(n), n is len(text)
+    Runtime, best case: O(1), if text == ''
+    Space Complexity: O(n), n is len(text)
+    """
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
     assert isinstance(pattern, str), 'pattern is not a string: {}'.format(text)
     
@@ -55,7 +63,11 @@ def find_index_iterative(text, pattern):
 
 def find_index(text, pattern, index=0, iterator=0):
     """Return the starting index of the first occurrence of pattern in text,
-    or None if not found."""
+    or None if not found.
+    Runtime, worst case: O(n), n is len(text)
+    Runtime, best case: O(1), if text == ''
+    Space Complexity: O(1), creating no new variables
+    """
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
     assert isinstance(pattern, str), 'pattern is not a string: {}'.format(text)
     
@@ -79,7 +91,11 @@ def find_index(text, pattern, index=0, iterator=0):
 
 def find_all_indexes(text, pattern, indexes=None, index=0, iterator=0):
     """Return a list of starting indexes of all occurrences of pattern in text,
-    or an empty list if not found."""
+    or an empty list if not found.
+    Runtime, worst case: O(n), n is len(text)
+    Runtime, best case: O(1), if text == ''
+    Space Complexity: O(n), appending to indexes list
+    """
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
     assert isinstance(pattern, str), 'pattern is not a string: {}'.format(text)
     
